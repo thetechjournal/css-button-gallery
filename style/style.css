@@ -1,0 +1,687 @@
+:root {
+    --primary: #ddc7c3;
+    --white: white;
+    --black: #272727;
+    --gray: #2e2c2c;
+    --light: #f5afa3;
+    --medium: #f39281;
+    --dark: rgb(160, 39, 39);
+    font-size: 18px;
+  }
+
+html {
+box-sizing: border-box;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+color: var(--gray);
+}
+
+*,
+*:before,
+*:after {
+box-sizing: inherit;
+}  
+
+body {
+    background-image: url("../images/topography.svg"),
+      linear-gradient(110deg, var(--gray), var(--primary));
+    background-size: 340px, auto;
+    min-height: calc(100vh - 100px);
+    margin: 25px;
+    background-attachment: fixed;
+  }
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0px;
+} 
+
+
+h1 span {
+    text-align: center;
+    display: block;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+
+.item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    background-color: var(--primary);
+}
+
+
+      
+.title {
+    width: 100%;
+    background: var(--medium);
+    color: var(--dark);
+    background-image: url(../images/paint.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 160%;
+    grid-column: span 2;
+    grid-row: 1 / 3;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* CSS Button Styles */
+.btn {
+    color: var(--dark);
+    width: 180px;
+    font-size: 1rem;
+    margin: 1em 0.5em; 
+    padding: 0.9em 1.3em; 
+    text-align: center;
+    cursor: pointer;
+    background: var(--medium);
+    color: var(—dark);
+}
+
+/* Button 1 */
+.btn-1 {
+    background: var(--medium);
+    color: var(—dark);
+    border-radius: 12px;
+}
+
+.btn-1:hover {
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* Button 2 */
+.btn-2{
+    border: 2px solid var(--medium);
+    border-radius: 3rem;
+    color: var(—dark);
+}
+
+.btn-2:hover {
+    border: 2px solid var(--dark);
+    color: var(--dark);
+    transform: perspective(1px) translateZ(0);
+}
+
+/* Button 3 */
+.btn-3 {
+    border-radius: 50%;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+/* Button 4 */  
+.btn-4 {
+    background-color: var(--white); 
+    color: var(--dark); 
+    border: 2px solid var(--medium);
+    transition-duration: 0.8s;
+}
+
+.btn-4:hover {
+    background-color: var(--medium);
+    color: var(--dark); ;
+    border-radius: 20px;
+}
+
+/* Button 5 */
+.btn-5 {
+    background-color: var(--white);  
+    color: var(--dark);
+    border: 2px solid var(--medium);
+    transition-duration: 0.8s;
+}
+
+.btn-5:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: var(--medium);
+    color: var(--dark); ;
+}
+
+/* Button 6 */
+.btn-6 {
+  border-radius: 4px;
+  background-color: var(--dark); 
+  color: var(--white); 
+  transition: all 0.5s;
+}
+
+.btn-6 span {
+    transition: 0.5s;
+}
+
+.btn-6 span:after {
+content: ' \00bb';
+opacity: 0;
+transition: 0.5s;
+}
+
+.btn-6:hover span {
+padding-right: 15px;
+
+}
+  
+.btn-6:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+/* Button 7 */
+.btn-7 {
+    background-color: var(--dark); 
+    color: var(--white); 
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btn-7:hover {
+    opacity: 1
+}
+
+/* Button 8 */
+.btn-8 {
+    position: relative;
+    background-color: var(--dark); 
+    color: var(--white); 
+    padding: 20px;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+.btn-8:after {
+  content: "";
+  background: var(--white); 
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.btn-8:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+/* Button 9 */
+.btn-9 {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: var(--dark); 
+  background-color: var(--medium);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+  
+.btn-9:hover {
+    background-color: var(--dark);
+    color: var(--white);
+  }
+
+.btn-9:active {
+  background-color: var(--dark);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  color: var(--white);
+}
+
+/* Button 10 */
+.btn-10 {
+box-shadow: 0px 1px 0px 0px #fff6af;
+background:linear-gradient(to bottom, var(--medium) 5%, var(--dark) 100%);
+background-color:white;
+border-radius:6px;
+border:1px solid #ffaa22;
+display:inline-block;
+color:white;
+text-shadow:0px 1px 0px #ffee66;
+}
+.btn-10:hover {
+background:linear-gradient(to bottom, var(--dark) 5%, var(--medium) 100%);
+background-color: var(--dark);
+}
+.btn-10:active {
+position:relative;
+top:1px;
+}
+
+/* Button 11 */
+.btn__icon {
+  font-size: 33px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.btn-11 {
+  height: 70px;
+width: 70px;
+border-radius: 50%;
+  transition-duration: .5s;
+transform: rotateX(45deg);
+box-shadow: 0px 10px 5px rgba(0, 0, 0, .3);
+  background-color: var(--dark);
+}
+
+
+.btn-11:hover {
+transform: scale(1.1);
+box-shadow: none;
+}
+
+/* Button 12 */
+.hexagon-wrapper {
+  /* margin: auto; */
+  display: flex;
+  text-align: initial;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.hexagon {
+  position: relative;
+  width: 46%;
+  height: 80%;
+  margin: auto;
+  color: white;
+  background: linear-gradient(-180deg, white, #fda3b2);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.hexagon i {
+  z-index: 1;
+  margin: auto;
+  font-size: 50px;
+  color: transparent;
+  background: linear-gradient(45deg, #a58fe9, #e37682);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hexagon:before,
+.hexagon:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.hexagon:before {
+  transform: rotateZ(60deg);
+}
+.hexagon:after {
+  transform: rotateZ(-60deg);
+}
+.hexagon:hover {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.hexagon:hover:before {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.hexagon:hover:after {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+
+/* Button 13 */
+.btn-13:hover {
+      animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+/* Button 14 */
+.btn-14:hover {
+  animation: jittery 4s infinite;
+}
+
+@keyframes jittery {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(0.9);
+  }
+
+  15% {
+    transform: scale(1.15);
+  }
+
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+
+/* Button 15 */
+.btn-15:hover {
+  box-shadow: 0 0 0 18px transparent;
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 #ab3925;
+  }
+}
+
+/* Button 16 */
+.btn-16 {
+  transition: 0.3s;
+}
+
+.btn-16:hover {
+  background: transparent;
+  box-shadow: inset 0 0 0 36px white;
+}
+
+/* Button 17 */
+.btn-17 {
+  background: white; 
+  color: #ab3925;
+  border-radius: 0;
+  box-shadow: 6px 6px 0 0 var(--medium), inset 6px 6px 0 0 rgb(214, 93, 93);
+  transition: 0.3s;
+} 
+
+.btn-17:hover {
+  color: white;
+  background: transparent;
+  box-shadow: 0 0 0 0 var(--medium),
+  inset 108px 72px 0 0 rgb(214, 93, 93);
+}
+
+/* Button 18 */
+.btn-18 {
+  text-decoration: none;
+  border: 1px solid #ab3925;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-18:hover {
+  box-shadow: 1px 1px 25px 10px rgb(214, 93, 93);
+}
+
+.btn-18:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    var(--medium),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn-18:hover:before {
+  left: 100%;
+}
+
+/* Button 19 */
+.box {
+    width: 200px;
+    height: 60px;
+    border: 2px solid var(--dark);
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.box span {
+    display: inline-block;
+    color: var(--medium);
+    transition: 0.5s;
+}
+
+.box span:nth-child(odd) {
+    transform: translateY(-100%);
+}
+
+.box span:nth-child(even) {
+    transform: translateY(100%);
+}
+
+.box span::before {
+    content: attr(data-text);
+    color: var(--dark);
+    position: absolute;
+}
+
+.box span:nth-child(odd)::before {
+    transform: translateY(100%);
+}
+
+.box span:nth-child(even)::before {
+    transform: translateY(-100%);
+}
+
+.box:hover span {
+    transform: translateY(0);
+}
+
+/* Button 20 */
+button{
+    width:200px;
+    height:70px;
+    background: linear-gradient(to left top, var(--dark) 50%, var(--medium) 50%);
+    border-style: none;
+    color:#fff;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-family: 'Lato';
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    transition: all .5s;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+button span{
+    position: absolute;
+    display: block;
+}
+button span:nth-child(1){
+    height: 3px;
+    width:200px;
+    top:0px;
+    left:-200px;
+    background: linear-gradient(to right, rgba(0,0,0,0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes span1{
+    0%{
+        left:-200px
+    }
+    100%{
+        left:200px;
+    }
+}
+
+button span:nth-child(2){
+    height: 70px;
+    width: 3px;
+    top:-70px;
+    right:0px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #f6e58d);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span2 2s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes span2{
+    0%{
+        top:-70px;
+    }
+    100%{
+        top:70px;
+    }
+}
+button span:nth-child(3){
+    height:3px;
+    width:200px;
+    right:-200px;
+    bottom: 0px;
+    background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    animation: span3 2s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes span3{
+    0%{
+        right:-200px;
+    }
+    100%{
+        right: 200px;
+    }
+}
+
+button span:nth-child(4){
+    height:70px;
+    width:3px;
+    bottom:-70px;
+    left:0px;
+    background: linear-gradient(to top, rgba(0,0,0,0), #dfd5a5);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    animation: span4 2s linear infinite;
+    animation-delay: 4s;
+}
+
+@keyframes span4{
+    0%{
+        bottom: -70px;
+    }
+    100%{
+        bottom:70px;
+    }
+}
+
+button:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+}
+button:hover span{
+    animation-play-state: paused;
+}
+
+
+@media (min-width: 800px) {
+    /* body {
+        color: green;
+    } */
+    .title {
+    grid-column: span 1;
+    grid-row: 1 / 4;
+}
+}
+
+/* Media Queries */
+@media (min-width: 1000px) {
+    /* body {
+        color: red;
+    } */
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+      .title {
+        grid-column: span 2;
+        grid-row: 1 / 4;
+    }
+}
+
+@media (min-width: 1400px) {
+    /* body {
+        color: yellow;
+    } */
+      .title {
+        grid-column: span 2;
+        grid-row: 1 / -1;
+    }
+
+    h1 {
+        margin-left: -1.2em;
+        margin-top: -1em;
+}
+}
